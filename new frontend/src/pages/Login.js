@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect} from 'react';
 import Default from '../components/Default';
-import {Row , Col , Form , Input, Button} from 'antd'
+import {Row , Col , Form , Input, Button,message} from 'antd'
 import FormItem from 'antd/lib/form/FormItem';
 import './login.css';
 import "antd/dist/antd.css";
@@ -14,7 +14,12 @@ function Login() {
  
   const [password, setPassword] = useState('');
   let history = useHistory();
-
+  function showAlert() {
+    message.success ("Login sucessfully!");
+  }
+  function failed(){
+    message.warning("username or password do not match")
+  }
   const checkvisiable =()=>{
     return (userName === '' || password === '')
   }
@@ -29,12 +34,14 @@ function Login() {
       }
     })
     .then((res) => {
+      showAlert();
       localStorage.setItem('userInfo', JSON.stringify(res.data));
       localStorage.setItem('login', JSON.stringify(true));
       setAuth(true);
       history.push('/carlist');
     })
     .catch((err) => {
+      failed();
       console.log(err);
     })
   }

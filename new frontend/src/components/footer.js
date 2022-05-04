@@ -15,7 +15,7 @@ const Footer = () => {
       <h1 style={{ color: "White", 
                    textAlign: "center", 
                    marginTop: "-50px" }}>
-        YIYI RENTAL: Professional Car Rental Company
+      Car Rental Company
       </h1>
       <Container>
         <Row >
@@ -24,16 +24,13 @@ const Footer = () => {
             <FooterLink href="#"><img src ='/peoplelog.png' alt='logo' width='55px' height='30px'/>Team Members </FooterLink>
           
           </Column>
-          <Column>
-            <Heading>Services</Heading>
-            <FooterLink href="#"><img src ='/reselog.png' alt='logo' width='55px' height='30px'/>Resevartion</FooterLink>
-            <FooterLink href="#"><img src ='/livechatlogo.png' alt='logo' width='55px' height='30px'/>Livechat</FooterLink>
          
-          </Column>
           <Column>
             <Heading>Power by</Heading>
             <FooterLink href="https://reactjs.org/" target="_blank"><img src ='/favicon.ico' alt='logo' width='55px' height='30px'/>React</FooterLink>
             <FooterLink href="https://expressjs.com/" target="_blank"><img src ='/nodelogo.png' alt='logo' width='70px' height='30px'/>Express</FooterLink>
+            <FooterLink href="https://www.mongodb.com/cloud/atlas/lp/try2?utm_source=google&utm_campaign=gs_americas_united_states_search_core_brand_atlas_desktop&utm_term=mongodb&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624338&adgroup=115749704103&gclid=Cj0KCQjwpcOTBhCZARIsAEAYLuVO5y9axdDNTQ83akODt1fdv_yU-Af3fiwq0pMKtVtp-GTY7bo1aHAaAhkoEALw_wcB" target="_blank">
+              <img src ='/mongodb-logo.png' alt='logo' width='70px' height='30px'/>MongoDB</FooterLink>
          
           </Column>
           <Column>

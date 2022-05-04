@@ -30,7 +30,7 @@ export default function CarList() {
   }, []);
   const gotoBooking = (car) => {
     return (e) => {
-      if(car.carOwner === userInfo.email){
+      if(userInfo.isCarOwner){
         message.warning('you are carOwner')
         return
       }
@@ -57,7 +57,7 @@ export default function CarList() {
                       <p className="carname">{car.name} {car.rentPerHour}</p>
                       
                     </div>
-                    <Button className="booking-btn float-right" variant="outline-primary " onClick={gotoBooking(car)}>
+                    <Button className="booking-btn" onClick={gotoBooking(car)}>
                       booking
                     </Button>
                   </div>

@@ -1,6 +1,6 @@
 import React , {useState, useContext, useEffect} from 'react'
 import Default from '../components/Default';
-import {Row , Col , Form , Input, Button,Checkbox , DatePicker,} from 'antd'
+import {Row , Col , Form , Input, Button,Checkbox , DatePicker, message} from 'antd'
 import FormItem from 'antd/lib/form/FormItem';
 import './login.css';
 import "antd/dist/antd.css";
@@ -28,7 +28,7 @@ function Register() {
   
 
   function showAlert() {
-    alert ("Create account sucessfully!");
+    message.success ("Create account sucessfully!");
   }
 
   const handleSubmitButtonClick = () => {
