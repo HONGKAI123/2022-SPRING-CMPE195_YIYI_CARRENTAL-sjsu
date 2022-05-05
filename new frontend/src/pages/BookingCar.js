@@ -108,7 +108,7 @@ class BookingCar extends PureComponent {
       if (val && reg.test(val)) {
         return Promise.resolve();
       }
-      return Promise.reject(new Error("Please enter 16 digits car number"));
+      return Promise.reject(new Error("Please enter 16 digits card number"));
     },
   });
   onValidCvs = ({ getFieldValue }) => ({

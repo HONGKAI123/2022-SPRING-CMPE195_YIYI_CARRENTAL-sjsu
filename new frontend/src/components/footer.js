@@ -21,7 +21,7 @@ const Footer = () => {
         <Row >
           <Column >
             <Heading>About Us</Heading>
-            <FooterLink href="#"><img src ='/peoplelog.png' alt='logo' width='55px' height='30px'/>Team Members </FooterLink>
+            <FooterLink href="/members"><img src ='/peoplelog.png' alt='logo' width='55px' height='30px'/>Team Members </FooterLink>
           
           </Column>
          

@@ -10,6 +10,8 @@ import CarList from './pages/CarList';
 import Profile from './pages/Profile';
 import OwnerProfile from './pages/OwnerProfile';
 import {AuthProvider} from './components/authContext';
+import Members from './pages/Members';
+
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
           <Route path='/carlist'  exact component = {CarList}/>
           <Route path='/profile'  exact component = {Profile}/>
           <Route path='/ownerProfile'  exact component = {OwnerProfile}/>
+          <Route path='/members' exact component= {Members} />
+          
         </BrowserRouter>
       </div>
     </AuthProvider>

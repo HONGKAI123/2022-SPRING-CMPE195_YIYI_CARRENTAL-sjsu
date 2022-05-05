@@ -7,7 +7,7 @@ import {
   Table,
   Row,
   Col,
-  Button,
+
   Modal,
   Form,
   Input,
@@ -16,6 +16,7 @@ import {
 import "./OwnerProfile.css";
 import axios from "axios";
 import moment from "moment";
+import {Button, Card} from 'react-bootstrap';
 const getUserInfo = (_id, setUser) => {
   axios({
     method: "get",
@@ -115,10 +116,10 @@ export default function Profile() {
             style={{ marginRight: "30px" }}
             onClick={onEditCar(record)}
           >
-            edit
+            Edit
           </a>
           <a href="#" onClick={onDelCarItem(record)}>
-            delete
+            Delete
           </a>
         </div>
       ),
@@ -152,8 +153,8 @@ export default function Profile() {
   const onDelCarItem = (record) => {
     return () => {
       Modal.confirm({
-        title: "Do you Want to delete these items?",
-        content: "Some descriptions",
+        title: "Do you want to delete this car?",
+        content: "Once you delete the car, you need to add tham again!",
         onOk() {
           console.log(111, record);
           axios({
@@ -282,10 +283,10 @@ export default function Profile() {
   return (
     <Default>
       <div className="contain">
-        <h2>
+        <h2 className="account">
           Account Information{" "}
           <Button
-            className="add-btn"
+            className="add-btn p-2"
             onClick={() => {
               setIsModalVisible(true);
             }}
@@ -295,7 +296,7 @@ export default function Profile() {
         </h2>
         <Row className="info-wrap">
           <Col span={6}>
-            <span>username：</span>
+            <span>Username：</span>
             {userInfo.username}
           </Col>
           <Col span={6}>
@@ -329,14 +330,14 @@ export default function Profile() {
             {userInfo.expDateStr}
           </Col>
         </Row>
-        <h3>
+        <h3 className="account">
           My Cars{" "}
-          <Button onClick={onAddCar} className="add-btn">
-            Add new car
+          <Button onClick={onAddCar} className="add-btn float-right mb-2">
+           + Add new car
           </Button>
         </h3>
         <Table dataSource={myCarList} columns={carColumns} />
-        <h3>Past order</h3>
+        <h3 className="account">Past order</h3>
         <Table dataSource={rentList} columns={columns} />
       </div>
       <Modal
@@ -371,7 +372,7 @@ export default function Profile() {
           >
             <Input maxLength={16} />
           </Form.Item>
-          <Form.Item
+          {/* <Form.Item
             label="fullName："
             name="fullName"
             required
@@ -379,7 +380,7 @@ export default function Profile() {
             rules={[{ required: true, message: "Please enter fullName!" }]}
           >
             <Input maxLength={16} />
-          </Form.Item>
+          </Form.Item> */}
           <Form.Item
             label="email："
             name="email"
@@ -407,7 +408,7 @@ export default function Profile() {
           >
             <Input maxLength={16} />
           </Form.Item>
-          <Form.Item
+          {/* <Form.Item
             label="driver license："
             name="driverLicense"
             required
@@ -415,7 +416,7 @@ export default function Profile() {
             rules={[{ required: true, message: "Please enter driver license!" }]}
           >
             <Input maxLength={16} />
-          </Form.Item>
+          </Form.Item> */}
           <Form.Item
             label="expiration date："
             name="expDate"
@@ -444,7 +445,7 @@ export default function Profile() {
           <Form.Item
             label="name"
             name="name"
-            rules={[{ required: true, message: "Please enter name" }]}
+            rules={[{ required: true, message: "Please enter car name" }]}
           >
             <Input />
           </Form.Item>
@@ -453,7 +454,7 @@ export default function Profile() {
             label="image："
             name="image"
             getValueFromEvent={getValueFromEvent}
-            rules={[{ required: true, message: "Please enter image!" }]}
+            rules={[{ required: true, message: "Please enter image URL!" }]}
           >
             <Input />
           </Form.Item>

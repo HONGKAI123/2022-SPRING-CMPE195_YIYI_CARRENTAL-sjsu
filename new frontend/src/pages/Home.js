@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css";
-import { Container } from "react-bootstrap";
-import bgimg from "../res/backg.jpg";
+
 import "animate.css";
 
 import Default from "../components/Default";

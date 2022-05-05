@@ -7,7 +7,7 @@ import "./CarList.css";
 import "animate.css";
 import axios from "axios";
 import { Col, Row, Divider, DatePicker, Checkbox, message } from "antd";
-import Button from 'react-bootstrap/Button';
+import {Button, Card} from 'react-bootstrap';
 export default function CarList() {
   const { auth, setAuth } = useContext(AuthContext);
   let history = useHistory();
@@ -49,6 +49,7 @@ export default function CarList() {
           {carlist1.map((car) => {
             return (
               <Col lg={5} sm={24} xs={24} key={car._id}>
+                <Card style={{ width: '15rem', backgroundColor:'#3D3D3D'}}>
                 <div className="car p-2 bs1">
                   <img src={car.image} className="carimg" />
 
@@ -57,11 +58,12 @@ export default function CarList() {
                       <p className="carname">{car.name} {car.rentPerHour}</p>
                       
                     </div>
-                    <Button className="booking-btn" onClick={gotoBooking(car)}>
+                    <Button className="booking-btn" variant="outline-secondary"  onClick={gotoBooking(car)}>
                       booking
                     </Button>
                   </div>
                 </div>
+                </Card>
               </Col>
             );
           })}
