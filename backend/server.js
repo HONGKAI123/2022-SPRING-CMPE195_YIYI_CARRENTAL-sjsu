@@ -15,4 +15,4 @@ app.use(require('./routes/userRoutes'))
 app.use(require('./routes/CarlistRoutes'))
 app.use(require('./routes/bookingRoutes'))
 
-app.listen(port,() => console.log('yiyi is in running on port 5000'))
+app.listen(port,() => console.log('Server in running on port 5000'))

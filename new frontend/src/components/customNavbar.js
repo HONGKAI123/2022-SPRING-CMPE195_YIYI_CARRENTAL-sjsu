@@ -34,9 +34,9 @@ export default function CustomNavbar(){
                         justifyContent: 'space-between'}}>
                     <Typography variant="h6" component="div" sx={{fontWeight: 700}} onClick={()=> {history.push('./')}}>
                         <img src ='/logo3.png' alt='logo' width='55px' height='30px'/>
-                        YIYI {''}Rental
+                        GG {''}Rental
                     </Typography>
-                    <Box sx={{display:'flex'}}>
+                    <Box sx={{display:'flex'}}GG>
                         {(auth) && (
                             <Button color ="inherit" onClick={()=> {history.push('./carlist')}}>Car List</Button>
                         )} 
