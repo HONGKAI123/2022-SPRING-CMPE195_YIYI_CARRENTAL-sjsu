@@ -23,7 +23,7 @@ function Register() {
   const {auth, setAuth} = useContext(AuthContext);
   
   const checkButtonVisibility = () => {
-    return ( (password === '') || (userName === '') || (cfmpassword === '') || (password !== cfmpassword) )
+    return ( (password === '') || (userName === '') || (cfmpassword === '') || (password !== cfmpassword) ||(age < 18) )
   }
   
 
@@ -113,7 +113,7 @@ function Register() {
                   setIsCarOwner(e.target.checked)
                 }}/>
               </div>
-              <button   type="primary" className='btn1' onClick={handleSubmitButtonClick} ><h2>Sign Up</h2></button>
+              <button  disabled={checkButtonVisibility()} type="primary" className='btn1' onClick={handleSubmitButtonClick} ><h2>Sign Up</h2></button>
 
               <div>
               <a href='./login'>Already a member? Click to Login</a>
