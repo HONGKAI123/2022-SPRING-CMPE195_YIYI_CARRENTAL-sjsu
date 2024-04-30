@@ -21,14 +21,13 @@ The primary goal is to provide a one-to-one idle car rental service that support
 # Clone the repository
 git clone https://github.com/HONGKAI123/2022-SPRING-CMPE195_GG_CARRENTAL-sjsu
 ```
-To run :
    Frontend:
 ```bash
         cd frontend
         npm install(install all the dependencies )
         npm start
 ```
-     Once the react development tool start, the homepage will run on localhost:3000   
+Once the react development tool start, the homepage will run on localhost:3000   
    Backend:
 ```bash
         cd backend
