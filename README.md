@@ -20,6 +20,7 @@ The primary goal is to provide a one-to-one idle car rental service that support
 ```bash
 # Clone the repository
 git clone https://github.com/HONGKAI123/2022-SPRING-CMPE195_GG_CARRENTAL-sjsu
+```
 To run :
    Frontend:
 ```bash
